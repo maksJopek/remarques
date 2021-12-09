@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "10-lesson",
+    "slug": "10-lesson",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  },
+  "name": "10-lesson"
+}
