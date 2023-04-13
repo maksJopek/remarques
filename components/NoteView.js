@@ -53,7 +53,7 @@ export default class NoteView extends React.Component {
       if (!nk) notesKeys = [0]; else notesKeys = JSON.parse(nk);
       const key = this.state.isNew ? Math.max(...notesKeys) + 1 : this.state.note.key;
       const date = Date.now();
-      const colors = ["darkred", "darkblue", "darkcyan", "darkgreen"]
+      const colors = ["#49d96c", "#f5ac58", "pink", "darkcyan"]
       const color = this.state.isNew ? colors[Math.floor(Math.random() * colors.length)] : this.state.note.color
       if (this.state.isNew)
         notesKeys.push(key);

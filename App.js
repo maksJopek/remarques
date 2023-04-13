@@ -21,7 +21,7 @@ function App() {
           title: 'Notes list',
           headerRight: () => <TouchableOpacity onPress={() => window.navigation.navigate("options")}><Image source={kIcon} style={{ width: 30, height: 30, marginRight: 10 }} /></TouchableOpacity>,
           headerStyle: {
-            backgroundColor: '#ff0000',
+            backgroundColor: '#ff5a5a',
           },
           headerTintColor: '#ffffff',
           headerTitleStyle: {
@@ -31,7 +31,7 @@ function App() {
         <Drawer.Screen name="addNote" component={NoteView} options={{
           title: 'Add note',
           headerStyle: {
-            backgroundColor: '#0000FF',
+            backgroundColor: '#b9e1ff',
           },
           headerTintColor: '#ffffff',
           headerTitleStyle: {
@@ -42,7 +42,7 @@ function App() {
         <Drawer.Screen name="editNote" component={NoteView} options={{
           title: 'Edit note',
           headerStyle: {
-            backgroundColor: 'darkgreen',
+            backgroundColor: '#49d96c',
           },
           headerTintColor: '#ffffff',
           headerTitleStyle: {
@@ -53,7 +53,7 @@ function App() {
         <Drawer.Screen name="addCategory" component={CategoryView} options={{
           title: 'Add category',
           headerStyle: {
-            backgroundColor: 'darkorange',
+            backgroundColor: '#f5ac58',
           },
           headerTintColor: '#ffffff',
           headerTitleStyle: {

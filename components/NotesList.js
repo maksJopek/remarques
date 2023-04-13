@@ -89,7 +89,7 @@ export default class NotesList extends React.Component {
             keyExtractor={(_, i) => i.toString()}
             contentContainerStyle={styles.list}
             style={styles.list}
-            numColumns={2}
+            numColumns={1}
           />
         </View>
       </View>
@@ -123,8 +123,8 @@ const styles = StyleSheet.create({
     backgroundColor: "black",
   },
   note: {
-    width: 160,
-    height: 160,
+    width: 350,
+    height: 200,
     backgroundColor: "red",
     borderRadius: 10,
     padding: 10,

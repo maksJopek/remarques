@@ -4,14 +4,14 @@ import * as SecureStore from 'expo-secure-store';
 
 let a = true
 export default function CategoryView(props) {
-  let [font, setFont] = React.useState(0)
+  let [font, setFont] = React.useState(22)
 
   async function setFontSS(f) {
     setFont(f);
     await SecureStore.setItemAsync('font', f.toString())
   }
 
-  React.useEffect(() => getFont(setFont), [])
+  React.useEffect(() => { getFont(setFont) }, [])
   if (a) {
     props.navigation.addListener('focus', () => getFont(setFont))
     a = false
@@ -19,10 +19,10 @@ export default function CategoryView(props) {
 
   return (
     <SafeAreaView style={styles.cont}>
-      <Text style={styles.txt}>Selected font: {font}</Text>
-      <TouchableOpacity onPress={() => setFontSS(12)}><Text style={[styles.txt, styles.btn]}>Font 12</Text></TouchableOpacity>
-      <TouchableOpacity onPress={() => setFontSS(19)}><Text style={[styles.txt, styles.btn]}>Font 19</Text></TouchableOpacity >
-      <TouchableOpacity onPress={() => setFontSS(26)}><Text style={[styles.txt, styles.btn]}>Font 26</Text></TouchableOpacity >
+      <Text style={[styles.txt, { fontSize: font < 12 ? 19 : font }]}>Selected font: {font}</Text>
+      <TouchableOpacity onPress={() => setFontSS(12)}><Text style={[styles.txt, styles.btn, { fontSize: 12 }]}>Font 12</Text></TouchableOpacity>
+      <TouchableOpacity onPress={() => setFontSS(19)}><Text style={[styles.txt, styles.btn, { fontSize: 19 }]}>Font 19</Text></TouchableOpacity >
+      <TouchableOpacity onPress={() => setFontSS(26)}><Text style={[styles.txt, styles.btn, { fontSize: 26 }]}>Font 26</Text></TouchableOpacity >
     </SafeAreaView >
   )
 }
